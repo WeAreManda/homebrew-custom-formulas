@@ -2,7 +2,10 @@
 
 ## How do I install these formulae?
 
-`brew install flatlooker/custom-formulas/<formula>`
+```bash
+brew install flatlooker/custom-formulas/postgresql
+brew install flatlooker/custom-formulas/postgis
+```
 
 Or `brew tap flatlooker/custom-formulas` and then `brew install <formula>`.
 
