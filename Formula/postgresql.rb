@@ -19,7 +19,6 @@ class Postgresql < Formula
   depends_on "krb5"
 
   depends_on "openssl@1.1"
-  
   depends_on "readline"
 
   uses_from_macos "libxml2"
@@ -55,6 +54,7 @@ class Postgresql < Formula
       --with-perl
       --with-uuid=e2fs
     ]
+
     if OS.mac?
       args += %w[
         --with-bonjour
