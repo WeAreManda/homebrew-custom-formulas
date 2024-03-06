@@ -11,6 +11,12 @@ class Postgresql < Formula
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
+  bottle do
+    root_url "https://github.com/WeAreManda/homebrew-custom-formulas/releases/download/postgresql-13.5"
+    rebuild 1
+    sha256 x86_64_linux: "8f1061658be1fd7f175482861f0dccbcb3958f8049ac5e7f2c0c3beadf3306d2"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "icu4c"
 
