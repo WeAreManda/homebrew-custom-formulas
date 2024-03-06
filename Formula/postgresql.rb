@@ -19,6 +19,7 @@ class Postgresql < Formula
   depends_on "krb5"
 
   depends_on "openssl@1.1"
+  
   depends_on "readline"
 
   uses_from_macos "libxml2"
