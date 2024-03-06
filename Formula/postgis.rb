@@ -25,16 +25,16 @@ class Postgis < Formula
   depends_on "geos"
   depends_on "json-c" # for GeoJSON and raster handling
   depends_on "pcre"
-  depends_on "proj@7"
+  depends_on "flatlooker/custom-formulas/postgresql"
+  depends_on "proj"
   depends_on "protobuf-c" # for MVT (map vector tiles) support
   depends_on "sfcgal" # for advanced 2D/3D functions
-  depends_on "flatlooker/custom-formulas/postgresql"
 
   def install
     ENV.deparallelize
 
     args = [
-      "--with-projdir=#{Formula["proj@7"].opt_prefix}",
+      "--with-projdir=#{Formula["proj"].opt_prefix}",
       "--with-jsondir=#{Formula["json-c"].opt_prefix}",
       "--with-pgconfig=#{Formula["postgresql"].opt_bin}/pg_config",
       "--with-protobufdir=#{Formula["protobuf-c"].opt_bin}",
