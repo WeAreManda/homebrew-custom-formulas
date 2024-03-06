@@ -60,6 +60,7 @@ class Postgresql < Formula
       --with-perl
       --with-uuid=e2fs
     ]
+
     if OS.mac?
       args += %w[
         --with-bonjour
